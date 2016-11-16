@@ -9,9 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DraggableImageView" customModule="Tinder" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="LjH-F9-gxz"/>
+                <outlet property="profileImageView" destination="az7-Uo-BZu" id="1YX-W7-kpC"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DraggableImageView" customModule="Tinder" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="304" height="304"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -20,19 +25,16 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <gestureRecognizers/>
                     <connections>
-                        <outletCollection property="gestureRecognizers" destination="Ivf-Z3-0p3" appends="YES" id="3cH-Ei-Fui"/>
+                        <outletCollection property="gestureRecognizers" destination="rBb-IW-9qW" appends="YES" id="b6r-i6-i3c"/>
                     </connections>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="profileImageView" destination="az7-Uo-BZu" id="SNb-yv-HUC"/>
-            </connections>
         </view>
-        <panGestureRecognizer minimumNumberOfTouches="1" id="Ivf-Z3-0p3">
+        <panGestureRecognizer minimumNumberOfTouches="1" id="rBb-IW-9qW">
             <connections>
-                <action selector="onImagePan:" destination="iN0-l3-epB" id="to3-Kj-Lnq"/>
+                <action selector="onImagePan:" destination="-1" id="wpn-OD-CgP"/>
             </connections>
         </panGestureRecognizer>
     </objects>

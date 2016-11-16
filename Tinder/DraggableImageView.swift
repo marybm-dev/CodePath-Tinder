@@ -12,7 +12,7 @@ class DraggableImageView: UIView {
 
     var imageOriginalCener: CGPoint!
     
-    var view: UIView!
+    @IBOutlet var contentView: UIView!
     
     var image: UIImage? {
         didSet {
@@ -27,8 +27,10 @@ class DraggableImageView: UIView {
         
         if sender.state == .began {
             imageOriginalCener = profileImageView.center
+            print("began")
             
         } else if sender.state == .changed {
+            print("changed")
             
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
                 self.profileImageView.center.x = translation.x
@@ -49,7 +51,7 @@ class DraggableImageView: UIView {
     func initSubviews() {
         let nib = UINib(nibName: "DraggableImageView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
-        view.frame = bounds
-        addSubview(view)
+        contentView.frame = bounds
+        addSubview(contentView)
     }
 }
