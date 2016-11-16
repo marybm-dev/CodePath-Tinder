@@ -8,18 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CardsViewController: UIViewController {
 
+    @IBOutlet weak var personImageView: UIImageView!
+    
+    var imageOriginalCener: CGPoint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func onImagePanGesture(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: self.view)
+        
+        if sender.state == .began {
+            imageOriginalCener = personImageView.center
+            
+        } else if sender.state == .changed {
+            
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+                self.personImageView.center.x = translation.x
+            })
+            
+        }
+        
     }
-
-
 }
 
