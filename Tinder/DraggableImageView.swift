@@ -10,31 +10,13 @@ import UIKit
 
 class DraggableImageView: UIView {
 
-    var imageOriginalCener: CGPoint!
-    
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    
     
     var image: UIImage? {
         didSet {
             profileImageView.image = image
-        }
-    }
-    
-    @IBOutlet weak var profileImageView: UIImageView!
-
-    @IBAction func onImagePan(_ sender: UIPanGestureRecognizer) {
-        let translation = sender.translation(in: self)
-        
-        if sender.state == .began {
-            imageOriginalCener = profileImageView.center
-            print("began")
-            
-        } else if sender.state == .changed {
-            print("changed")
-            
-            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
-                self.profileImageView.center.x = translation.x
-            })
         }
     }
     
