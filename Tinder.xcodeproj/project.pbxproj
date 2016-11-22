@@ -14,6 +14,7 @@
 		4890660E1DDBF189003E623F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4890660C1DDBF189003E623F /* LaunchScreen.storyboard */; };
 		489066161DDBF54B003E623F /* DraggableImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489066151DDBF54B003E623F /* DraggableImageView.xib */; };
 		489066181DDBF578003E623F /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489066171DDBF578003E623F /* DraggableImageView.swift */; };
+		48FCB76D1DE4DB4400F9EBE8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FCB76C1DE4DB4400F9EBE8 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4890660F1DDBF189003E623F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		489066151DDBF54B003E623F /* DraggableImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DraggableImageView.xib; sourceTree = "<group>"; };
 		489066171DDBF578003E623F /* DraggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
+		48FCB76C1DE4DB4400F9EBE8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				489066031DDBF189003E623F /* AppDelegate.swift */,
 				489066051DDBF189003E623F /* CardsViewController.swift */,
 				489066171DDBF578003E623F /* DraggableImageView.swift */,
+				48FCB76C1DE4DB4400F9EBE8 /* Extensions.swift */,
 				489066151DDBF54B003E623F /* DraggableImageView.xib */,
 				489066071DDBF189003E623F /* Main.storyboard */,
 				4890660A1DDBF189003E623F /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 				489066061DDBF189003E623F /* CardsViewController.swift in Sources */,
 				489066181DDBF578003E623F /* DraggableImageView.swift in Sources */,
 				489066041DDBF189003E623F /* AppDelegate.swift in Sources */,
+				48FCB76D1DE4DB4400F9EBE8 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +311,7 @@
 				489066141DDBF189003E623F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
